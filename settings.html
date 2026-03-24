@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Settings</h1>
+
+    <form id="settingsForm" onsubmit="return saveSettings()">
+        <label>
+            <input type="checkbox" id="darkMode"> Enable Dark Mode
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="notifications"> Enable Notifications
+        </label>
+        <br><br>
+        <button type="submit">Save Settings</button>
+    </form>
+
+    <br>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function saveSettings() {
+            const darkMode = document.getElementById('darkMode').checked;
+            const notifications = document.getElementById('notifications').checked;
+
+            alert(`Settings Saved!\nDark Mode: ${darkMode}\nNotifications: ${notifications}`);
+
+            // Optional: Apply dark mode visually
+            document.body.style.backgroundColor = darkMode ? '#222' : '#fff';
+            document.body.style.color = darkMode ? '#fff' : '#000';
+
+            return false;
+        }
+
+        function goBack() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Your Skills</h1>
+
+    <div class="skill-cards">
+        <div class="skill-card" onclick="skillSelected('HTML')">HTML</div>
+        <div class="skill-card" onclick="skillSelected('CSS')">CSS</div>
+        <div class="skill-card" onclick="skillSelected('JavaScript')">JavaScript</div>
+        <div class="skill-card" onclick="skillSelected('Python')">Python</div>
+    </div>
+
+    <br>
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function skillSelected(skill) {
+            alert("You selected: " + skill);
+        }
+
+        function goBack() {
+            window.location.href = "dashboard.html";
+        }
+    </script>
+
+</body>
+</html>
